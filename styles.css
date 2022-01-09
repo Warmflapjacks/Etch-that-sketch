@@ -1,1 +1,9 @@
-/*stylesheet*/
+#grid {
+    display: grid;
+    height: 500px;
+    width: 500px;
+}
+
+.grid-item {
+    border: solid black 1px;
+}
