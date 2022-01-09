@@ -1,9 +1,22 @@
 #grid {
     display: grid;
-    height: 500px;
-    width: 500px;
+    border: solid black 2px;
+    height: 700px;
+    width: 700px;
 }
 
-.grid-item {
-    border: solid black 1px;
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    font-weight: 50px;
+}
+
+.grid-item:hover {
+    background-color: black;
 }
