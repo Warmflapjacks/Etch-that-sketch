@@ -11,18 +11,22 @@ function setupGrid (size) {
     //creates <div> with class name "grid-item"
     for (let i = 1; i <= size * size; i++) {
         const div = document.createElement("div");
+        //assigns <div> created in DOM the classname of grid-item
         div.className = ("grid-item");
         grid.appendChild(div);
 
-        getBoxBackground(div);
+
+        //pass div to getBoxBackground b/c eventlisteners only work on DOM elements
+        blackBackground(div);
     }
 }
 
 //adds color to individual grids 
-function getBoxBackground (div) {
+function blackBackground (div) {
     div.onmouseover = () => {
-        div.classList.add("color-box");
+        div.classList.add("black-box");
     }
 }
 
 setupGrid(DEFAULT_SIZE);
+// console.log(typeof gridItem); // returns object
