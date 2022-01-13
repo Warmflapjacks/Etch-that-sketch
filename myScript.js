@@ -1,5 +1,5 @@
 //global variables
-const DEFAULT_SIZE = 16;
+const DEFAULT_SIZE = 50;
 const grid = document.getElementById("grid");
 const gridItem = document.getElementsByClassName("grid-item");
 
