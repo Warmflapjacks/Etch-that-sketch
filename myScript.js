@@ -1,7 +1,31 @@
 //global variables
 const DEFAULT_SIZE = 50;
 const grid = document.getElementById("grid");
-const gridItem = document.getElementsByClassName("grid-item");
+const buttons = document.querySelectorAll("button");
+
+//event listener for buttons
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        if (button.id === "reset") {
+            //gets amount of squares per side from user
+            let userInput = parseInt(window.prompt("How many squares per side? Entry cannot be more than 100."));
+            
+            //input validation
+            if (userInput <= 100) {
+            setupGrid(userInput);
+            clearGrid();
+            }
+
+            else {
+                alert("Invalid selection. Squares per side cannot be more than 100. Please try again.");
+            }
+        }
+        if (button.id === "rainbow") {
+            console.log("Im the rainbow button")
+        }
+    })
+})
+
 
 //generates grid based of size
 function setupGrid (size) {
@@ -28,5 +52,12 @@ function blackBackground (div) {
     }
 }
 
+function clearGrid () {
+   const element = document.querySelectorAll(".grid-item");
+   
+   for (let i = 0; i < element.length; i++) {
+       element[i].classList.remove("black-box");
+   }
+}
+
 setupGrid(DEFAULT_SIZE);
-// console.log(typeof gridItem); // returns object
