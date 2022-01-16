@@ -1,5 +1,5 @@
 //global variables
-const DEFAULT_SIZE = 50;
+const DEFAULT_SIZE = 75;
 const grid = document.getElementById("grid");
 const buttons = document.querySelectorAll("button");
 
