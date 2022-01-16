@@ -20,6 +20,7 @@ buttons.forEach((button) => {
                 alert("Invalid selection. Squares per side cannot be more than 100. Please try again.");
             }
         }
+        //create an RBG function inside conditional statement
         if (button.id === "rainbow") {
             console.log("Im the rainbow button")
         }
@@ -35,6 +36,7 @@ function setupGrid (size) {
     //creates <div> with class name "grid-item"
     for (let i = 1; i <= size * size; i++) {
         const div = document.createElement("div");
+        
         //assigns <div> created in DOM the classname of grid-item
         div.className = ("grid-item");
         grid.appendChild(div);
