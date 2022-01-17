@@ -40,9 +40,47 @@ body {
     margin-right: 10px;
 }
 
-#button-container .button {
+.button {
     margin-top: 10px;
     margin-bottom: 10px;
+    border-radius: 15px;
+    border: solid;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 7px #999;
+    background-color: white;
+}
+
+#reset {
+   border-color: #f44336; 
+   color: red;
+}
+
+#reset:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+#reset:active {
+    background-color: #f44336;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#rainbow {
+    color: green;
+    border-color: green;
+}
+
+#rainbow:hover {
+    color: white;
+    background-color: green;
+}
+
+#rainbow:active {
+    background-color: green;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 
